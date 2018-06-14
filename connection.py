@@ -53,11 +53,6 @@ def dictolistutil(dic, key=None, value = None):
 
 def getResultbyName(name):
     vData=[]
-    try:
-        Keys.remove('name')
-        Keys.remove('Sachin')
-    except ValueError:
-        pass
     for key in Keys[:5]:
         tempd = rconn.hgetall(key)
         print(tempd)

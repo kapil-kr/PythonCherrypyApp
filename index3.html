@@ -1,0 +1,55 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Kapil Solution</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="static/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+<nav class="green lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">{{site_title}}</a>
+      <ul class="right hide-on-med-and-down">
+     <li><a href="/">Home</a></li></ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+<div class="container">
+
+     <h1 class="header center orange-text">{{ title }}</h1>
+      <ul class="collection with-header">
+        <li class="collection-header">
+                <p style="font-size: 100%">
+                {% for head in list_header %}
+                {{head}} 
+                {% endfor %}
+                </p>
+            </li>
+        
+        
+        {% for recod in records %}
+        <li class="collection-item"><a href="#">{{recod}}</a></li>
+        {% endfor %}
+      </ul>
+    <br>
+    <br>
+</div>
+<div class="container">
+        <ul class="collection with-header">
+                <li class="collection-header">
+                        <form method="get" action="resultset"> 
+                                Enter Name: <input type="text" name="name"> 
+                                <input type = "submit"> 
+                            </form> 
+                    </li>
+                    {% for res in searchRes %}
+                    <li class="collection-item"><a href="#">{{res}}</a></li>
+                    {% endfor %}
+          </ul>
+</div>
+  </body>
+</html>

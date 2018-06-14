@@ -67,14 +67,8 @@ def getResultbyName(name):
             vData.append(str)
     return vData
 
-#for key in rconn.scan_iter("SC_CODE:*"):
 
-#print(rconn.keys())
-
-print(rconn.hgetall("500002"))
-#data = rconn.hgetall("500002")
-#print(data['SC_CODE'])
+#print(rconn.hgetall("500002"))
 SaveData()
 #print(VisibleData())
 #print(VisibleFields())
-print(getResultbyName('HDFC'))

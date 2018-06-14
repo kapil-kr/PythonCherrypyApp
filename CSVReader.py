@@ -34,18 +34,6 @@ def fileReader():
         for row in csvreader:
             rows.append(row)
     return rows,fields
-        #print("Total no. of rows: %d"%(csvreader.line_num))
+        
  
 downloadFile()
-# printing the field names
-#print('Field names are:' + ', '.join(field for field in fields))
- 
-#  printing first 5 rows
-#print('\nFirst 5 rows are:\n')
-#for row in rows[:5]:
-    # parsing each column of a row
-#    for col in row:
-#        print("%10s"%col),
-#    print('\n')
-
-#print(rows[:5])
